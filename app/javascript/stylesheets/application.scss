@@ -1,2 +1,5 @@
 // app/javascript/stylesheets/application.scss
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+.disabled_navbar {
+ background-color: #f9e545;
+}

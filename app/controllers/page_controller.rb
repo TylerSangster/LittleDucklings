@@ -1,4 +1,5 @@
 class PageController < ApplicationController
+  layout "disable_navbar", only: [:home]
   def home
   end
 

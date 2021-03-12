@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsBootstrap</title>
+    <title>Little Ducklings Childcare Centre</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +14,7 @@
 
   <body>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="/">Our Logo</a>
+      <a class="navbar-brand" href="/">Little Ducklings Childcare Centre</a>
       <form class="form-inline">
         <a class="btn btn-outline-primary" href="/login" role="button">
         Login
@@ -26,6 +26,8 @@
         </div>
       </form>
     </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

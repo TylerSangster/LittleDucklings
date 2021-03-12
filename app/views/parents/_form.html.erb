@@ -1,0 +1,62 @@
+<%= form_with(model: parent) do |form| %>
+  <% if parent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parent.errors.count, "error") %> prohibited this parent from being saved:</h2>
+
+      <ul>
+        <% parent.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_primary %>
+    <%= form.text_field :phone_primary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_secondary %>
+    <%= form.text_field :phone_secondary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primary_contract %>
+    <%= form.check_box :primary_contract %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :province %>
+    <%= form.text_field :province %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal %>
+    <%= form.text_field :postal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
