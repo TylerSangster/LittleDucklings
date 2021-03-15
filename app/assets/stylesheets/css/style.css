@@ -253,7 +253,7 @@ header nav ul li a .fa-home,
 	background-attachment: inherit;
 }
 .bg1 {
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png'); 
 	background-size: contain;
 	background-color: #6b448e;
 	background-repeat: repeat;
@@ -265,25 +265,25 @@ header nav ul li a .fa-home,
 	background-color: #eceff1;
 }
 .bg-1 {
-	background:#33b3cd url(../images/bg-vector-lg.png);
+	background:#33b3cd image-url('bg-vector-lg.png');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .bg-2 {
-	background:#d24c8c url(../images/bg-vector-lg.png);
+	background:#d24c8c image-url('bg-vector-lg.png');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .bg-3 {
-	background:#714b91 url(../images/bg-vector-lg.png);
+	background:#714b91 image-url('bg-vector-lg.png');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .bg-4 {
-	background:#80b44a url(../images/bg-vector-lg.png);
+	background:#80b44a image-url('bg-vector-lg.png');
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -298,13 +298,13 @@ header nav ul li a .fa-home,
 	background-image: url(http://via.placeholder.com/1466x524);
 }
 .bg5 {
-	background-image: url(../images/bg5.png);
+	background-image: image-url('bg5.png');
 }
 .bg6 {
-	background-image: url(../images/bg6.jpg);
+	background-image: image-url('bg6.png');
 }
 .bg7 {
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-color: #7eb247;
 	background-size: contain;
 	background-repeat: repeat;
@@ -313,11 +313,11 @@ header nav ul li a .fa-home,
 	background-image: url(http://via.placeholder.com/1466x708);
 }
 .bg9 {
-	background-image: url(../images/bg-contact.jpg);
+	background-image: image-url('bg-contact.jpg');
 	background-attachment: inherit;
 }
 .bg10 {
-	background-image: url(../images/bg10.jpg);
+	background-image: image-url('bg10.jpg');
 	background-attachment: inherit;
 }
 .bg11 {
@@ -835,15 +835,15 @@ header.hp2 .cart-opt a {
 	width: 100%;
 }
 .sbg1 {
-	background-image: url(../images/sbg1.png);
+	background-image: image-url('sbg1.png');
 	border-color: #0f9fbc;
 }
 .sbg2 {
-	background-image: url(../images/sbg2.png);
+	background-image: image-url('sbg2.png');
 	border-color: #ba2b6f;
 }
 .sbg3 {
-	background-image: url(../images/sbg3.png);
+	background-image: image-url('sbg3.png');
 	border-color: #c05631;
 }
 .service-info {
@@ -936,7 +936,7 @@ header.hp2 .cart-opt a {
 	-o-border-radius: 3px;
 	border-radius: 3px;
 	padding: 15px 60px;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	margin-top: 14px;
 	background-repeat: repeat;
 	background-size: contain;
@@ -1022,7 +1022,7 @@ header.hp2 .cart-opt a {
 
 .tch-team h3 {
 	color: #ffffff;
-	font-size: 44px;
+	font-size: 40px;
 	font-family: 'Amatic SC', cursive;
 	font-weight: 700;
 	margin-bottom: 20px;
@@ -1133,7 +1133,7 @@ header.hp2 .cart-opt a {
 }
 .features-list-tab ul li a {
 	background-repeat: repeat;
-	background-image: url(../images/bg-vector-small.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-size: cover;
 	position: relative;
 }
@@ -1145,7 +1145,7 @@ header.hp2 .cart-opt a {
     width: 103%;
     height: 2px;
     background-color: #db5896;
-    background-image: url(../images/bg-vector-small.png);
+    background-image: image-url('bg-vector-lg.png');
     background-size: cover;
     background-repeat: repeat;
 }*/
@@ -1194,7 +1194,7 @@ header.hp2 .cart-opt a {
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 	border-radius: 5px;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-size: contain;
 	background-position: center center;
 }
@@ -1271,7 +1271,7 @@ header.hp2 .cart-opt a {
 	float: left;
 	width: 140px;
 	height: 140px;
-	background-image: url(../images/sbg1.png);
+	background-image: image-url('sbg1.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
@@ -1279,11 +1279,11 @@ header.hp2 .cart-opt a {
 	border: 2px solid #0f9fbc;
 }
 .counter-dv.st2 {
-	background-image: url(../images/sbg2.png);
+	background-image: image-url('sbg2.png');
 	border-color: #ba2b6f;
 }
 .counter-dv.st3 {
-	background-image: url(../images/sbg3.png);
+	background-image: image-url('sbg3.png');
 	border-color: #c05631;
 }
 .counter-txt {
@@ -1347,7 +1347,7 @@ header.hp2 .cart-opt a {
 }
 .testimonial-carousel:before {
 	left: 100px;
-	background-image: url(../images/quote-left.png);
+	background-image: image-url('quote-left.png');
 }
 .testimonial-carousel:before,
 .testimonial-carousel:after {
@@ -1359,7 +1359,7 @@ header.hp2 .cart-opt a {
 }
 .testimonial-carousel:after {
 	right: 100px;
-	background-image: url(../images/quote-right.png);
+	background-image: image-url('quote-right.png');
 }
 .testi-comment p {
 	color: #fff;
@@ -1568,7 +1568,7 @@ header.hp2 .cart-opt a {
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-size: cover;
 	display: table-cell;
 }
@@ -1609,7 +1609,7 @@ header.hp2 .cart-opt a {
 	border-radius: 3px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 }
 .toggle-item h2 i {
 	padding-right: 15px;
@@ -1625,7 +1625,7 @@ header.hp2 .cart-opt a {
 .clr1 {
 	border: 2px solid #ba2b6f;
 	background-color: #d35591;
-	background-image: url(../images/sbg2.png);	
+	background-image: image-url('sbg2.png');	
 }
 .clr2 {
 	background-color: #1a9eb9;
@@ -1972,7 +1972,7 @@ header.hp2 .cart-opt a {
 	-o-border-radius: 3px;
 	border-radius: 3px;
 	padding: 15px 25px;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-repeat: repeat-x;
 	background-position: center center;
 	background-size: contain;
@@ -1988,7 +1988,7 @@ footer {
 	width: 100%;
 	background-color: #744b97;
 	padding: 75px 0;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-repeat: repeat;
     background-position: center center;
     background-size: contain;
@@ -2134,7 +2134,7 @@ footer .widget-title {margin-top: -4px;}
 .pager-sec {
 	padding: 50px 0;
 	background-color: #714b94;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-size: contain;
 }
 .pager-pag {
@@ -2260,7 +2260,7 @@ footer .widget-title {margin-top: -4px;}
 	background-color: #32b3cd;
 	border: 2px solid #1a9eb9;
 	padding: 16px 30px;
-	background-image: url(../images/bg-vector-small.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: repeat;
@@ -2527,7 +2527,7 @@ caption {
 	background-color: #d75392;
 	border: 2px solid #ba2b6f;
 	text-align: center;
-	background-image: url(../images/bg-vector2.png);
+	background-image: image-url('bg-vector2.png'); 
 	background-size: cover;
 	display: table-cell;
 	float: left;
@@ -2625,7 +2625,7 @@ caption {
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 	border-radius: 5px;
-	background-image: url(../images/bg-vector2.png);
+	background-image: image-url('bg-vector2.png'); 
 	background-size: cover;
 	padding: 15px 65px;
 	cursor: pointer;
@@ -2690,7 +2690,7 @@ caption {
 	font-weight: 700;
 	padding: 15px 60px;
 	background-color: #36b6d0;
-	background-image: url(../images/bg-vector2.png);
+	background-image: image-url('bg-vector2.png'); 
 	background-size: cover;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -2834,7 +2834,7 @@ caption {
 	-o-border-radius: 3px;
 	border-radius: 3px;
 	border: 2px solid #1a9eb9;
-	background-image: url(../images/bg-vector2.png);
+	background-image: image-url('bg-vector2.png'); 
 	background-size: cover;
 	background-position: center center;
 	background-repeat: repeat;
@@ -3111,7 +3111,7 @@ caption {
 	line-height: 38px;
 	text-align: left;
 	padding-left: 15px;
-	background-image: url(../images/bg-vector2.png);
+	background-image: image-url('bg-vector2.png'); 
 	background-size: cover;
 	background-color: #d24c8c;
 	position: relative;
@@ -4402,7 +4402,7 @@ caption {
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: repeat;
@@ -4600,7 +4600,7 @@ caption {
 .fancyboxes-item.bfrm .fancy-hd span {
 	background-color: #f7f7f7;
 	border-color: #ffffff;
-	background-image: url(../images/bg-vector-lg.png);
+	background-image: image-url('bg-vector-lg.png');
 	background-repeat: repeat;
 	background-size: cover;
 }
