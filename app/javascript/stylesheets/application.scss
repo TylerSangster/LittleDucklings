@@ -8,13 +8,31 @@
   border-radius: 2rem !important;
 }
 
-.carousel-item {
-  height: 100vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
+#carousel-main {
+  .carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+  
+
+#accordion-your-children {
+  .btn {
+    margin-bottom: 0;
+  }
+  .card-header {
+    h2 {
+      margin-bottom: 0;
+    }
+    padding: 0 0;
+    .btn {
+      padding: 0;
+    }
+  }
+}
