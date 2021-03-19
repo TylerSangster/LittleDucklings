@@ -17,25 +17,30 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Little Ducklings Childcare Centre</a>
+        <a class="navbar-brand" href="#"><%= image_tag("logo-no-ducks.png", width: 200) %><%= image_tag("logo-just-ducks.png", width: 200) %></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                    <span class="sr-only">(current)</span>
-                  </a>
+   
+            <li class="nav-item">
+              <a class="nav-link" href="#welcome">Welcome</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#educators">Educators</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#menu">Menu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
             </li>
           </ul>
         </div>
@@ -82,7 +87,7 @@
         </a>
       </div>
     </header>
-    <section class="block2">
+    <section id="welcome" class="block2">
       <div class="fixed-bg bg1"></div>
       <div class="container">
         <div class="descp-sec">
@@ -172,7 +177,7 @@
           </section>
 
 
-          <section class="block3 remove-btm-gap">
+          <section id="educators" class="block3 remove-btm-gap">
             <div class="fixed-bg bg2 overlay"></div>
             <div class="container">
               <div class="heading">
@@ -249,7 +254,7 @@
           </section>
 
 
-          <section class="block2 remove-btm-gap">
+          <section  class="block2 remove-btm-gap">
             <div class="container">
               <div class="facility-sec">
                 <div class="row">
@@ -271,22 +276,26 @@
           </section>
 
 
-          <section class="block4">
+          <section id="menu" class="block4">
             <div class="container">
+              
               <div class="our-features-sec">
                 <div class="features-list-tab">
                   <ul class="nav nav-tabs" id="nav-tab" role="tablist">
                   <li>
-                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Education</a>
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Monday</a>
                   </li>
                     <li>
-                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Activities</a>
+                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Tuesday</a>
                     </li>
                   <li>
-                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Friendship</a>
+                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Wednesday</a>
                   </li>
                   <li>
-                     <a class="nav-link" id="dev-tab" data-toggle="tab" href="#dev" role="tab" aria-controls="dev" aria-selected="false">Development</a>
+                     <a class="nav-link" id="dev-tab" data-toggle="tab" href="#dev" role="tab" aria-controls="dev" aria-selected="false">Thursday</a>
+                  </li>
+                  <li>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Friday </a>
                   </li>
                 </ul>
                 </div><!--features-list-tab end-->
@@ -367,7 +376,7 @@
           </section>
 
 
-          <section class="block3">
+          <section id='testimonials' class="block3">
             <div class="fixed-bg bg3"></div>
             <div class="container">
               <div class="vol-per-sec">
@@ -703,7 +712,7 @@
           </section>
 
 
-          <section class="block2">
+          <section id="gallery" class="block2">
             <div class="fixed-bg bg7 no-fix"></div>
             <div class="heading st2">
               <h3>Gallery</h3>
@@ -746,7 +755,7 @@
 
 
 
-          <section class="block3">
+          <section id="blog" class="block3">
             <div class="container">
               <div class="heading clr">
                 <h3>Kindergarten Blog & News</h3>
@@ -813,7 +822,7 @@
                       <h3 class="widget-title">About Us</h3>
                       <p>Ut wisi enim ad minim veniam, quis nostr exerci tation ullamorper suscipit lobortis isl ut aliquip ex ea commdo consequat. Duiste vel eum iriure door in hendrerit in vulpuatevelit esse molestie.</p>
                         
-                      <%= image_tag 'logo2.png' %>
+                      <%= image_tag 'logo-white-ducks.png', width: 250 %>
                     </div><!--widget-about end-->
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-12 col-12">
