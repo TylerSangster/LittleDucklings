@@ -53,10 +53,11 @@
           <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-main" data-slide-to="1"></li>
           <li data-target="#carousel-main" data-slide-to="2"></li>
+          <li data-target="#carousel-main" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+          <div class="carousel-item active" style='background-image: url("<%= image_url('slider-banner.jpg') %>")'>
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">First Slide</h2>
               <p class="lead">This is a description for the first slide.</p>
@@ -73,6 +74,13 @@
           <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">Third Slide</h2>
+              <p class="lead">This is a description for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style='background-image: url("<%= image_url('slider-banner.jpg') %>")'>
+            
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">4th Slide</h2>
               <p class="lead">This is a description for the third slide.</p>
             </div>
           </div>
@@ -100,9 +108,9 @@
         <div class="our-services">
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div class="alert alert-success" role="alert">
+<!--               <div class="alert alert-success" role="alert">
                 This is a success alert—check it out!
-              </div>
+              </div> -->
               <div class="service-details">
                 <div class="service-icon sbg1">
                   <i class="fa fa-paw"></i>
@@ -116,9 +124,9 @@
               </div><!--service-details end-->
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-              <div class="alert alert-danger" role="alert">
+<!--               <div class="alert alert-danger" role="alert">
                 This is a danger alert—check it out!
-              </div>
+              </div> -->
               
               <div class="service-details">
                 <div class="service-icon sbg2">
@@ -134,9 +142,9 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
               <div class="service-details">
-                <div class="alert alert-warning" role="alert">
+<!--                 <div class="alert alert-warning" role="alert">
                   This is a warning alert—check it out!
-                </div>
+                </div> -->
                 <div class="service-icon sbg3">
                   <i class="fa fa-paw"></i>
                 </div>
@@ -278,7 +286,7 @@
 
           <section id="menu" class="block4">
             <div class="container">
-              
+
               <div class="our-features-sec">
                 <div class="features-list-tab">
                   <ul class="nav nav-tabs" id="nav-tab" role="tablist">
