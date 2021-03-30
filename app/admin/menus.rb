@@ -5,7 +5,7 @@ ActiveAdmin.register Menu do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :title, :description, :date
+  permit_params :title, :description, :date
   #
   # or
   #

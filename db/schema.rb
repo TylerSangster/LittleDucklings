@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_193437) do
+ActiveRecord::Schema.define(version: 2021_03_25_212532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "broadcasts", force: :cascade do |t|
+    t.integer "admin_user_id"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "children", force: :cascade do |t|
@@ -74,6 +81,18 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.bigint "conversation_id"
+    t.bigint "parent_id"
+    t.boolean "read", default: false
+    t.boolean "comfirmed", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["parent_id"], name: "index_messages_on_parent_id"
+  end
+
   create_table "parents", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -86,6 +105,18 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "children", "parents"
