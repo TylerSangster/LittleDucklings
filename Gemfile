@@ -30,6 +30,8 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'activeadmin'
+gem 'activeadmin_addons'
+# gem 'active_admin_datetimepicker'
 
 # Plus integrations with:
 gem 'devise'
@@ -39,6 +41,9 @@ gem 'pundit'
 
 # test messages api
 gem 'twilio-ruby'
+
+gem 'friendly_id'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

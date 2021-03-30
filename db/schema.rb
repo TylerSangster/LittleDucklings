@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_212532) do
+ActiveRecord::Schema.define(version: 2021_03_30_162753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,22 @@ ActiveRecord::Schema.define(version: 2021_03_25_212532) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "blog_posts", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "subtitle"
+    t.string "state", default: "draft", null: false
+    t.text "body", null: false
+    t.string "publisher"
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "slug"
+    t.index ["published_at"], name: "blog_posts_published_at_idx"
+    t.index ["slug"], name: "index_blog_posts_on_slug", unique: true
+    t.index ["state"], name: "blog_posts_state_idx"
+    t.index ["title"], name: "blog_posts_title_idx"
   end
 
   create_table "broadcasts", force: :cascade do |t|
@@ -105,6 +121,30 @@ ActiveRecord::Schema.define(version: 2021_03_25_212532) do
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "state", default: "draft", null: false
+    t.text "body"
+    t.string "location"
+    t.string "reviewer"
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["published_at"], name: "reviews_published_at_idx"
+    t.index ["state"], name: "reviews_state_idx"
+  end
+
+  create_table "staff_pages", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "location"
+    t.string "state", default: "draft", null: false
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["published_at"], name: "staff_pages_published_at_idx"
+    t.index ["state"], name: "staff_pages_state_idx"
   end
 
   create_table "users", force: :cascade do |t|
