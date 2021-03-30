@@ -5,7 +5,7 @@ ActiveAdmin.register Child do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :first_name, :last_name, :birthday, :sex, :location, :allergies_notes, :notes, :parent_id
+  permit_params :first_name, :last_name, :birthday, :sex, :location, :allergies_notes, :notes, :parent_id
   #
   # or
   #

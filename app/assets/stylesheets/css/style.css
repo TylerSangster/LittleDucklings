@@ -301,7 +301,7 @@ header nav ul li a .fa-home,
 	background-image: image-url('bg5.png');
 }
 .bg6 {
-	background-image: image-url('bg6.png');
+	background-image: image-url('bg6.jpg');
 }
 .bg7 {
 	background-image: image-url('bg-vector-lg.png');
@@ -823,7 +823,7 @@ header.hp2 .cart-opt a {
 	height: 120px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	border: 2px solid #0f9fbc;
+	/*border: 2px solid #0f9fbc;*/
 	margin: 0 auto;
 }
 .service-icon i {
@@ -837,6 +837,7 @@ header.hp2 .cart-opt a {
 .sbg1 {
 	background-image: image-url('sbg1.png');
 	border-color: #0f9fbc;
+	/*border-color: #6b448e;*/
 }
 .sbg2 {
 	background-image: image-url('sbg2.png');

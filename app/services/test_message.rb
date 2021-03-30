@@ -11,5 +11,5 @@ to = '+16132970373' # Your mobile phone number
 client.messages.create(
 from: from,
 to: to,
-body: "Hey Sexy!"
+body: "Hey Tyler! The Little Ducklings is closing at Noon. Please reply with 'y' let us know you have saw this message"
 )

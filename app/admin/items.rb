@@ -5,7 +5,7 @@ ActiveAdmin.register Item do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :title, :item_type, :ingredients, :description, :menu_id, :type
+  permit_params :title, :item_type, :ingredients, :description, :menu_id, :type
   #
   # or
   #

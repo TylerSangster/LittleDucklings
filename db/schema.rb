@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_170204) do
+ActiveRecord::Schema.define(version: 2021_03_25_212532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 2021_03_25_170204) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "broadcasts", force: :cascade do |t|
+    t.integer "admin_user_id"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "children", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -53,13 +60,6 @@ ActiveRecord::Schema.define(version: 2021_03_25_170204) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["parent_id"], name: "index_children_on_parent_id"
-  end
-
-  create_table "conversations", force: :cascade do |t|
-    t.integer "sender_id"
-    t.integer "recipient_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -79,6 +79,18 @@ ActiveRecord::Schema.define(version: 2021_03_25_170204) do
     t.datetime "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.bigint "conversation_id"
+    t.bigint "parent_id"
+    t.boolean "read", default: false
+    t.boolean "comfirmed", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["parent_id"], name: "index_messages_on_parent_id"
   end
 
   create_table "parents", force: :cascade do |t|
