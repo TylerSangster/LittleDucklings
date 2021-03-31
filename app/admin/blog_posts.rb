@@ -46,16 +46,12 @@ ActiveAdmin.register BlogPost do
     f.inputs 'BlogPost Details' do
       f.input :title
       f.input :subtitle
-      f.input :slug
       f.input :publisher
-
-
-      
       f.input :state,
               as: :select,
               value: f.object.state,
-              collection: ['draft', 'published'],
-              input_html: { class: '' }
+              collection: ['draft', 'published']
+
       f.input :published_at, as: :date_time_picker, hint: "In #{ Time.current.zone } time zone."
     end
     f.actions

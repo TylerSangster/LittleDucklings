@@ -30,7 +30,7 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'activeadmin'
-gem 'activeadmin_addons'
+gem 'activeadmin_addons'  
 # gem 'active_admin_datetimepicker'
 
 # Plus integrations with:
