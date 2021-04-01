@@ -8,7 +8,6 @@ class CreateChildren < ActiveRecord::Migration[6.1]
       t.string :location
       t.text :allergies_notes
       t.text :notes
-      t.belongs_to :parent, null: false, foreign_key: true
 
       t.timestamps
     end

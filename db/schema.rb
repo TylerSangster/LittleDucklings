@@ -65,10 +65,8 @@ ActiveRecord::Schema.define(version: 2021_03_30_224342) do
     t.string "location"
     t.text "allergies_notes"
     t.text "notes"
-    t.bigint "parent_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["parent_id"], name: "index_children_on_parent_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -130,6 +128,5 @@ ActiveRecord::Schema.define(version: 2021_03_30_224342) do
     t.index ["state"], name: "staff_pages_state_idx"
   end
 
-  add_foreign_key "children", "parents"
   add_foreign_key "items", "menus"
 end
