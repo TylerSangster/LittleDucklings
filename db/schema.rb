@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_193437) do
+ActiveRecord::Schema.define(version: 2021_03_30_224342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
@@ -41,6 +41,22 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "blog_posts", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "subtitle"
+    t.string "state", default: "draft", null: false
+    t.text "body", null: false
+    t.string "publisher"
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "slug"
+    t.index ["published_at"], name: "blog_posts_published_at_idx"
+    t.index ["slug"], name: "index_blog_posts_on_slug", unique: true
+    t.index ["state"], name: "blog_posts_state_idx"
+    t.index ["title"], name: "blog_posts_title_idx"
+  end
+
   create_table "children", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -49,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.string "location"
     t.text "allergies_notes"
     t.text "notes"
-    t.integer "parent_id", null: false
+    t.bigint "parent_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["parent_id"], name: "index_children_on_parent_id"
@@ -60,7 +76,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.integer "item_type"
     t.string "ingredients"
     t.string "description"
-    t.integer "menu_id", null: false
+    t.bigint "menu_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["menu_id"], name: "index_items_on_menu_id"
@@ -86,6 +102,32 @@ ActiveRecord::Schema.define(version: 2021_03_12_193437) do
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "state", default: "draft", null: false
+    t.text "body"
+    t.string "location"
+    t.string "reviewer"
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["published_at"], name: "reviews_published_at_idx"
+    t.index ["state"], name: "reviews_state_idx"
+  end
+
+  create_table "staff_pages", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "location"
+    t.string "state", default: "draft", null: false
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "slug"
+    t.index ["published_at"], name: "staff_pages_published_at_idx"
+    t.index ["slug"], name: "index_staff_pages_on_slug", unique: true
+    t.index ["state"], name: "staff_pages_state_idx"
   end
 
   add_foreign_key "children", "parents"
