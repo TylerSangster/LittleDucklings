@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/home' => 'page#home'
   get '/lake' => 'page#lake'
   get '/pond' => 'page#pond'
+  get '/programs' => 'pages#program'
 end

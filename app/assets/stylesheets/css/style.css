@@ -4307,7 +4307,7 @@ caption {
 	left: 0;
 	width: 100%;
 	height: 12px;
-	background: url(../images/price-bg.png);
+	background: image-url('price-bg.png');
 	padding: 0 15px;
 }
 .ico {
