@@ -2661,6 +2661,7 @@ caption {
 }
 .room-info .title-hd {
 	font-size: 53px;
+	line-height: 44px;
 	margin-bottom: 25px;
 	color: #575656;
 }
@@ -4362,11 +4363,7 @@ caption {
 	font-family: 'Myriad Pro';
 	font-weight: 600;
 }
-.pricing-content ul li > span b {
-	color: #4a4a4a;
-	font-size: 34px;
-	display: inline-block;
-}
+
 .pricing-content ul li > span strong {
 	color: #82b849;
 	font-size: 54px;
