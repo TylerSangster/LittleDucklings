@@ -779,11 +779,18 @@ header.hp2 .cart-opt a {
 }
 
 /* ================= descp-sec ================ */
-
+.page-sub-title {
+  /*font-size: 18px;*/
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  color: #ffdd00;
+}
 .descp-sec {
 	float: left;
-	width: 100%;
-	text-align: center;
+  width: 100%;
+  text-align: center;
+  font-family: Dosis;
 }
 .descp-sec h3 {
 	color: #ffffff;
@@ -852,9 +859,17 @@ header.hp2 .cart-opt a {
 	width: 100%;
 	text-align: center;
 	margin-top: 23px;
+	/*color: #575656;*/
+	color: #fff;
+	font-size: 20px;
+	border: 1px solid;
+	border-color: #575656;
+	border-radius: 15px;
+	padding: 10px;
 }
 .service-info h3 {
 	color: #575656;
+	color: #fff;
 	font-size: 48px;
 	font-weight: 700;
 	font-family: 'Amatic SC', cursive;
@@ -2145,11 +2160,12 @@ footer .widget-title {margin-top: -4px;}
 }
 .pager-pag h3 {
 	color: #fff;
-	font-size: 38px;
+	font-size: 53px;
 	line-height: 42px;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 20px;
+	font-family: 'Amatic SC';
 }
 .pager-pag h4 {
 	color: #ffdd00;
@@ -2670,7 +2686,7 @@ caption {
 	font-size: 18px;
 	font-weight: 700;
 	float: left;
-	margin-bottom: 35px;
+	margin-bottom: 10px;
 	width: 100%;
 }
 .room-info h3 {
@@ -4351,17 +4367,21 @@ caption {
 }
 .pricing-content ul li {
 	float: left;
-	width: 100%;
-	background-color: rgba(252, 252, 253, 0.8);
-	border:1px solid #d7d7d7;
-	padding: 23px 32px 10px 32px;
-	margin: 0 0 7px;
+  width: 100%;
+  background-color: rgba(252, 252, 253, 0.8);
+  border: 1px solid #d7d7d7;
+  padding: 0px 32px 0px 32px;
+  margin: 0 0 15px;
 }
 .pricing-content ul li > span {
 	float: left;
-	display: inline-block;
-	font-family: 'Myriad Pro';
-	font-weight: 600;
+	color: #837879;
+	font-size: 27px;
+	font-family: 'Dosis';
+	font-weight: 700;
+	 text-transform: capitalize; 
+	margin-top: 20px;
+	line-height: 50px;
 }
 
 .pricing-content ul li > span strong {
@@ -4471,7 +4491,7 @@ caption {
 .cms-opn-info {
 	float: left;
 	width: 100%;
-	padding: 70px 45px 70px 0;
+	padding: 70px 45px 70px 45px;
 	height: 400px;
 }
 .cms-opng-details .col-lg-6 {
