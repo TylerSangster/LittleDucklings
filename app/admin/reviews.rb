@@ -5,7 +5,9 @@ ActiveAdmin.register Review do
   index do
     id_column
     column :reviewer
+    column :location
     column :body
+
     column :state
     column :published_at
     actions
@@ -14,6 +16,7 @@ ActiveAdmin.register Review do
   show do
     attributes_table do
       row :reviewer
+      row :location
       row :body
       row :state
       row :published_at
@@ -25,6 +28,7 @@ ActiveAdmin.register Review do
   form do |f|
     f.inputs 'Review Details' do
       f.input :reviewer
+      f.input :location
       f.input :body
       f.input :state,
               as: :select,
