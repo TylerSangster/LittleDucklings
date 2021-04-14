@@ -42,8 +42,8 @@ ActiveAdmin.register StaffPage do
               as: :select,
               value: f.object.state,
               collection: ['draft', 'published']
-       f.input :published_at
-      # f.input :published_at, as: :date_time_picker, hint: "In #{ Time.current.zone } time zone."
+       # f.input :published_at
+      f.input :published_at, as: :date_time_picker, hint: "In #{ Time.current.zone } time zone."
     end
     f.actions
   end

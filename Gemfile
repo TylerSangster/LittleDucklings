@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'activeadmin'
 gem 'friendly_id'
+gem 'activeadmin_addons'
 
 # Plus integrations with:
 gem 'devise'
