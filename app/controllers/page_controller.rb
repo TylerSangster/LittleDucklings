@@ -7,6 +7,7 @@ class PageController < ApplicationController
   end
 
   def home
+    @notices = Notice.published
   end
 
   def lake

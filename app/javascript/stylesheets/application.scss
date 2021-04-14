@@ -1,13 +1,15 @@
 // app/javascript/stylesheets/application.scss
 @import '~bootstrap/scss/bootstrap';
 @import 'navbar';
+// @import 'vertical_slider';
+
+
 
 
 .row {
   margin-right: 0px;
   margin-left: 0px;
 }
-
 .disabled_navbar {
  background-color: #f9e545;
 }
@@ -16,7 +18,31 @@
 }
 
 
-#carousel-main {
+#myCarousel{
+  .carousel-item {
+    height: 30vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+#message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 25;
+    margin-top: 65px;
+}
+#inner-message {
+    margin: 0 auto;
+}
+
+#carousel-main{
   .carousel-item {
     height: 100vh;
     min-height: 350px;
@@ -28,7 +54,6 @@
   }
 }
   
-
 #accordion-your-children {
   .btn {
     margin-bottom: 0;
