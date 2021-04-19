@@ -1,6 +1,7 @@
 class PageController < ApplicationController
 
   layout "disable_navbar", only: [:coming_soon]
+  # layout "locations", only: [:locations]
   # before_action :authenticate_user!, only: [:home]
 
   def coming_soon
@@ -16,6 +17,7 @@ class PageController < ApplicationController
   def pond
   end
 
-  def programs
+  def locations
+    render layout: "locations"
   end
 end
