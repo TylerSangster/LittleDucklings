@@ -12,12 +12,15 @@ class PageController < ApplicationController
   end
 
   def lake
+    @notices = Notice.published
   end
 
   def pond
+    @notices = Notice.published
   end
 
   def locations
+    @notices = Notice.published
     render layout: "locations"
   end
 end

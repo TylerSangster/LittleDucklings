@@ -862,7 +862,7 @@ header.hp2 .cart-opt a {
 }
 
 .sbg4 {
-  background-image: url(/assets/bg-vector-lg-77eaa02….png);
+  background-image: image-url('bg-vector-lg.png');
   background-size: contain;
   background-color: #D0322E;
   background-repeat: repeat;
