@@ -2663,6 +2663,22 @@ caption {
 	padding: 15px 65px;
 	cursor: pointer;
 }
+.btn-submit-green {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	background-color: #7db146;
+	border: 2px solid #5a8d23;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background-image: image-url('bg-vector2.png'); 
+	background-size: cover;
+	padding: 15px 65px;
+	cursor: pointer;
+}
 
 
 /* ============= session-rooms =========== */

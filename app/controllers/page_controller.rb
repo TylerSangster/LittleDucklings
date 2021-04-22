@@ -8,14 +8,19 @@ class PageController < ApplicationController
   end
 
   def home
+    # binding.pry
+    @contact = Contact.new(params[:home])
     @notices = Notice.published
+    @contact_submission = ContactSubmission.new
   end
 
   def lake
+    @contact = Contact.new
     @notices = Notice.published
   end
 
   def pond
+    @contact = Contact.new
     @notices = Notice.published
   end
 
@@ -23,4 +28,5 @@ class PageController < ApplicationController
     @notices = Notice.published
     render layout: "locations"
   end
+
 end

@@ -1,0 +1,23 @@
+<%= binding.pry %>
+<%= form_with(model: contact_submission) do |form| %>
+  <% if contact_submission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact_submission.errors.count, "error") %> prohibited this contact_submission from being saved:</h2>
+
+      <ul>
+        <% contact_submission.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <%= form.text_field :name %>
+    <%= form.text_field :email %>
+    <%= form.text_field :subject %>
+    <%= form.text_field :location %>
+    <%= form.text_area :message, size: "60x10" %>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
