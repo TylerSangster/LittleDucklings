@@ -1,5 +1,22 @@
 
 <section  class="block2">
+  <% if @notices %>
+    <% @notices.each do |notice|%>
+      <div id="notices-message">
+          <div style="padding: 5px;">
+
+            <div id="inner-message" class="alert alert-success" role="alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h4 class="alert-heading"><%= notice.title %></h4>
+              <p><%= notice.body %></p>
+              <hr>
+              <p class="mb-0"><%= notice.author %></p>
+            </div>
+
+          </div>
+      </div>
+    <% end %>
+  <% end %>
   <div class="fixed-bg bg-locations"></div>
   <div class="container">
 

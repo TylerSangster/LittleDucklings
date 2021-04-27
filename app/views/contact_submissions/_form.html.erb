@@ -1,23 +1,45 @@
-<%= binding.pry %>
-<%= form_with(model: contact_submission) do |form| %>
-  <% if contact_submission.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contact_submission.errors.count, "error") %> prohibited this contact_submission from being saved:</h2>
 
-      <ul>
-        <% contact_submission.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div id="contact-us-form">
+
+  <%= form_with(model: @contact_submission, local: false) do |form| %>
+    <% if @contact_submission.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@contact_submission.errors.count, "error") %> prohibited this contact_submission from being saved:</h2>
+
+        <ul>
+          <% @contact_submission.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+
+    <% end %>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-field">
+          <%= form.text_field :name, placeholder: "Name", required: true %><br>
+        </div>
+        <div class="input-field">
+          <%= form.text_field :email, placeholder: "Email", required: true  %><br>
+        </div>
+        <div class="input-field">
+          <%= form.text_field :subject, placeholder: "Subject", required: true  %><br>
+        </div>
+        <div class="hidden-field">
+          <%= form.hidden_field :location, value: @location %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="input-field">
+          <%= form.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                          placeholder: "Send Little Ducklings a message"%></br>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="btn-submit">
+          <%= form.submit 'Send Message', class: 'btn-submit-green ' %>
+        </div>
+      </div>
     </div>
-    <%= form.text_field :name %>
-    <%= form.text_field :email %>
-    <%= form.text_field :subject %>
-    <%= form.text_field :location %>
-    <%= form.text_area :message, size: "60x10" %>
   <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
