@@ -13,6 +13,9 @@
 @import "active_admin/base";
 $am-theme-primary: #342e48;
 @import 'activeadmin_addons/all';
+
+@import 'font-awesome/font-awesome';
+@import 'activeadmin/froala_editor_input';
 // @import 'activeadmin_addons/material';
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:

@@ -33,6 +33,9 @@ gem 'activeadmin'
 gem 'friendly_id'
 gem 'activeadmin_addons'
 
+
+gem 'activeadmin_froala_editor'
+
 # Plus integrations with:
 gem 'devise'
 gem 'cancancan'

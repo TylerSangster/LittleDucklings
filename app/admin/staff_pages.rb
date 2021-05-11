@@ -27,6 +27,9 @@ ActiveAdmin.register StaffPage do
     attributes_table do
       row :name
       row :body
+      row :body do |page|
+        page.body.html_safe
+      end 
       row :state
       row :slug
       row :updated_at
@@ -37,12 +40,11 @@ ActiveAdmin.register StaffPage do
   form do |f|
     f.inputs 'Staff Page Details' do
       f.input :name
-      f.input :body
+      f.input :body, as: :froala_editor
       f.input :state,
               as: :select,
               value: f.object.state,
               collection: ['draft', 'published']
-       # f.input :published_at
       f.input :published_at, as: :date_time_picker, hint: "In #{ Time.current.zone } time zone."
     end
     f.actions
