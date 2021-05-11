@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Staff Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>Location</th>
+      <th>State</th>
+      <th>Published at</th>
+      <th>Created at</th>
+      <th>Updaated at</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @staff_pages.each do |staff_page| %>
+      <tr>
+        <td><%= staff_page.name %></td>
+        <td><%= staff_page.slug %></td>
+        <td><%= staff_page.location %></td>
+        <td><%= staff_page.state %></td>
+        <td><%= staff_page.published_at %></td>
+        <td><%= staff_page.created_at %></td>
+        <td><%= staff_page.updated_at %></td>
+        <td><%= staff_page.body %></td>
+        <td><%= link_to 'Show', staff_page %></td>
+        <td><%= link_to 'Edit', edit_staff_page_path(staff_page) %></td>
+        <td><%= link_to 'Destroy', staff_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Staff Page', new_staff_page_path %>

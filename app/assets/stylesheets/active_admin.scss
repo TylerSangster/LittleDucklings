@@ -13,6 +13,16 @@
 @import "active_admin/base";
 $am-theme-primary: #342e48;
 @import 'activeadmin_addons/all';
+@import "trix/dist/trix";
+
+
+.active_admin {
+  form trix-editor {
+    margin-left: 20%;
+    width: calc(80% - 17px);
+    background-color: #fff;
+  }
+}
 // @import 'activeadmin_addons/material';
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:

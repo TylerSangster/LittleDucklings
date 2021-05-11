@@ -10,6 +10,8 @@ import "channels"
 import "@fortawesome/fontawesome-free/js/all";
 
 import "../stylesheets/application";
+import "../trix-editor-overrides";
+
 
 Rails.start()
 Turbolinks.start()
@@ -17,6 +19,9 @@ ActiveStorage.start()
 
 require("bootstrap")
 require('@fortawesome/fontawesome-free');
+require('activeadmin_quill_editor')
+require("trix")
+require("@rails/actiontext")
 
 document.addEventListener("turbolinks:load", function() {
     $(function () {
@@ -26,3 +31,6 @@ document.addEventListener("turbolinks:load", function() {
     
 })
 
+
+require("trix")
+require("@rails/actiontext")

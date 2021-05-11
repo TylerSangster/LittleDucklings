@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @staff_page.name %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @staff_page.slug %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @staff_page.location %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @staff_page.state %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @staff_page.published_at %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @staff_page.created_at %>
+</p>
+
+<p>
+  <strong>Updaated at:</strong>
+  <%= @staff_page.updaated_at %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @staff_page.body %>
+</p>
+
+<%= link_to 'Edit', edit_staff_page_path(@staff_page) %> |
+<%= link_to 'Back', staff_pages_path %>

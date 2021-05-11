@@ -2,6 +2,8 @@
 //= require activeadmin_addons/all
 //= require active_material
 
+//= require trix/dist/trix
+
 
 
 // $(function() {
