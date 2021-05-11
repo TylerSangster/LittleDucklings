@@ -1,9 +1,16 @@
 ActiveAdmin.register StaffPage do
-
-  permit_params :name, :body, :state, :slug, :location, :published_at,  images: []
+  
+  # permit_params 
+  permit_params do
+    binding.pry
+    permitted = [:name, :cover_photo, :body, :state, :slug, :location, :published_at, :content]
+    # permitted << :other if params[:action] == 'create' && current_user.admin?
+    permitted
+  end
   # find record with slug(friendly_id)
   controller do
     def find_resource
+      # binding.pry
       begin
         scoped_collection.where(slug: params[:id]).first!
       rescue ActiveRecord::RecordNotFound
@@ -14,6 +21,7 @@ ActiveAdmin.register StaffPage do
 
   index do
     id_column
+    column :cover_photo
     column :name
     column :slug
     column :state
@@ -25,8 +33,12 @@ ActiveAdmin.register StaffPage do
 
   show do
     attributes_table do
+      row :cover_photo do |page|
+        image_tag page.cover_photo if page.cover_photo.present?
+      end
       row :name
       row :body
+
       row :state
       row :slug
       row :updated_at
@@ -36,8 +48,10 @@ ActiveAdmin.register StaffPage do
 
   form do |f|
     f.inputs 'Staff Page Details' do
+      f.file_field :cover_photo
       f.input :name
-      f.input :body
+      f.input :body, as: :action_text
+      f.input :content, as: :action_text
       f.input :state,
               as: :select,
               value: f.object.state,
