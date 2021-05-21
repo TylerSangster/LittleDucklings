@@ -4,51 +4,30 @@
     <div class="heading st2">
       <h3>What The Parents Say</h3>
     </div><!--heading end-->
-
-    <div id="carouselContent" class="testimonial-carousel carousel slide" data-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="testi-comment carousel-item active text-center ">
-          <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas. Praesent arcu gravida vehicula est node maecenas loareet.</p>
-          <div class="client-info">
-            <h3>Sarah Ashbey</h3>
-            <h4>Stratford, PE</h4>
-            <ul>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-          </div><!--client-info end-->
-        </div><!--testi-comment end-->
-        <div class="testi-comment carousel-item text-center ">
-          <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas. Praesent arcu gravida vehicula est node maecenas loareet.</p>
-          <div class="client-info">
-            <h3>Louisa Green</h3>
-            <h4>London</h4>
-            <ul>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-          </div><!--client-info end-->
-        </div><!--testi-comment end-->
-        <div class="testi-comment carousel-item text-center ">
-          <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas. Praesent arcu gravida vehicula est node maecenas loareet.</p>
-          <div class="client-info">
-            <h3>Louisa Green</h3>
-            <h4>London</h4>
-            <ul>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-          </div><!--client-info end-->
-        </div><!--testi-comment end-->
+    <% if @reviews.exists? %>
+      <div id="carouselContent" class="testimonial-carousel carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <% @reviews.each do |review| %>
+            <div class="testi-comment carousel-item active text-center ">
+              <p><%= review.body.html_safe %></p>
+              <div class="client-info">
+                <h3><%= review.reviewer %></h3>
+                <h4><%= review.location %></h4>
+                <ul>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div><!--client-info end-->
+            </div><!--testi-comment end-->
+          <% end %>
+    <% end%>
+    
+        
+       
+        
       </div>
       <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
