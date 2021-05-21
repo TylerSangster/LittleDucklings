@@ -1,0 +1,43 @@
+
+// .scroller {
+//   div {
+//     text-align: center;
+//     font-size: 30px;
+//   }
+// }
+
+// .slick-prev::before, .slick-next::before {
+//   color: #000;
+// }
+
+// .slick-next {
+//   right: -5px;
+// }
+
+// .slick-prev {
+//   left: -5px;
+// }
+
+/* .slick-list emulates .row */
+#slick .slick-list {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* .slick-slide emulates .col- */
+#slick .slick-slide {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#slick .slick-slide:focus {
+  outline: none;
+}
+
+#slick {
+  // display: none;
+}
+
+#slick.slick-initialized {
+  display: block;
+}
