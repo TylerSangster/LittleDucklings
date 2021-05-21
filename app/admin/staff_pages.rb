@@ -102,6 +102,7 @@ ActiveAdmin.register StaffPage do
           'paragraphFormat', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'quote', 'insertHR', '-',
           'insertLink', 'insertImage', 'insertVideo', 'insertTable', 'undo', 'redo', 'clearFormatting', 'selectAll', 'html'
         ],
+        key: "<%= ENV['FROALA_EDITOR_ACTIVATION_KEY'] %>",
         heightMin: 300,
         heightMax: 800,
         htmlRemoveTags: ['base'],
