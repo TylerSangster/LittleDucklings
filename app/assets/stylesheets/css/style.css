@@ -224,7 +224,8 @@ header nav ul li a .fa-home,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(59,188,214,0.90);
+	background-color: rgba(59,188,214,0.85);
+	opacity: 0.75;
 }
 .remove-btm-gap {
 	padding-bottom: 0 !important;
@@ -292,7 +293,8 @@ header nav ul li a .fa-home,
     background-size: cover;
 }
 .bg2 {
-	background-image: url(http://via.placeholder.com/1466x831);
+	background-image: image-url('bg2-background.jpeg');
+	/*background-image: url(http://via.placeholder.com/1466x831);*/
 }
 .bg3 {
 	background-color: #f5f5f5;

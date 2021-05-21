@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root to: 'page#coming_soon', as: :root
@@ -7,5 +8,6 @@ Rails.application.routes.draw do
   get '/lake' => 'page#lake'
   get '/pond' => 'page#pond'
   get '/locations' => 'page#locations'
+  resources :staff_pages, only: :show
 
 end

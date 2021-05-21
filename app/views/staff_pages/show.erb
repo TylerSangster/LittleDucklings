@@ -1,0 +1,102 @@
+  <section class="pager-sec">
+    <div class="container">
+      <div class="pager-pag">
+        <h3>Educators</h3>
+        <h4><%= @staff_page.location %></h4>
+      </div><!--pager-pag end-->
+    </div>
+  </section><!--pager-sec end-->
+
+
+  <section class="block6">
+    <div class="container">
+      <div class="blog-post-page">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="posts-page">
+              <div class="post-blog">
+                <h3 class="post-title"><i class="fa fa-graduation-cap"></i> <%= @staff_page.name %></h3>
+                <div class="post-img">
+                  <%= image_tag(@staff_page.cover_photo) %>
+                  <!-- <img src="http://via.placeholder.com/794x511" alt=""> -->
+                </div>
+                
+                <div class="blog-post-info">
+                  <ul class="post-tg">
+            
+                    <li>
+                      <i class="fa fa-school"></i>
+                      <a href="#" title="">Location: <%= @staff_page.location %></a>
+                      
+                    </li>
+                    <li>
+                      <i class="fa fa-chalkboard-teacher"></i>
+                      <a href="#" title=""><%= @staff_page.location %></a>
+                    </li>
+
+                  </ul>
+                  <p></p>
+                </div><!--blog-post-info end-->
+                <div class="post-body">
+                  <%= @staff_page.body.html_safe %>
+                </div>
+              </div><!--post-blog end-->
+            </div><!--posts-page end-->
+          </div>
+          <div class="col-lg-3">
+            <div class="right-sidebar">
+              <div class="widget widget-posts">
+                  <h3 class="widget-title">Recent Posts</h3>
+                  <div class="blg-posts">
+                    <div class="blg-post">
+                      <img src="http://via.placeholder.com/50x50" alt="">
+                      <div class="blg-info">
+                        <h3>Story Time</h3>
+                        <span>May 13 2016 | by <a href="#" title="">admin</a></span>
+                        <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas...</p>
+                      </div>
+                    </div><!--blg-post end-->
+                    <div class="blg-post">
+                      <img src="http://via.placeholder.com/50x50" alt="">
+                      <div class="blg-info">
+                        <h3>Reading Lessons</h3>
+                        <span>May 13 2016 | by <a href="#" title="">admin</a></span>
+                        <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas...</p>
+                      </div>
+                    </div><!--blg-post end-->
+                    <div class="blg-post">
+                      <img src="http://via.placeholder.com/50x50" alt="">
+                      <div class="blg-info">
+                        <h3>Education Through Play</h3>
+                        <span>May 13 2016 | by <a href="#" title="">admin</a></span>
+                        <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas...</p>
+                      </div>
+                    </div><!--blg-post end-->
+                  </div><!--blg-posts end-->
+                </div><!--widget-posts end-->
+              <div class="widget widget-categories">
+                <h3 class="widget-title">Pages</h3>
+                <ul>
+                  <li><a href="#" title="">Dance</a></li>
+                  <li><a href="#" title="">Education</a></li>
+                  <li><a href="#" title="">Events</a></li>
+                  <li><a href="#" title="">Fun</a></li>
+                  <li><a href="#" title="">General</a></li>
+                  <li><a href="#" title="">Games</a></li>
+                </ul>
+              </div><!--widget-categories end-->
+              <div class="widget widget-text">
+                <h3 class="widget-title">Text Widget</h3>
+                <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas.</p>
+                <p> Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat elit maecenas. </p>
+              </div><!--widget-text end-->
+              
+
+              
+              
+            </div><!--right-sidebar end-->
+          </div>
+        </div>
+      </div><!--blog_post end-->
+    </div>
+  </section>
