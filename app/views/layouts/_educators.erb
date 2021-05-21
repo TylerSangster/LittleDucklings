@@ -3,77 +3,33 @@
   <div class="container">
     <div class="heading">
       <h3>Meet Our Educators</h3>
-      <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas.</p>
+      <!-- <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas.</p> -->
     </div><!--heading end-->
-    <div class="teachers-sec">
-      <div class="row staff-carousel">
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Sarah Larter</h3>
-            <%= image_tag 'staff-photo-2.png', width: 250 ,style: '' %>
-            
-            <span>Founder</span>
-          </div><!--tch-team end-->
+    <%- if @staff_pages.exists? %>
+      <div class="teachers-sec">
+        <div class="row staff-carousel">
+          <% @staff_pages.each do |staff| %>
+            <%= link_to staff_page_path(staff) do %>
+              <div class="col-lg-3">
+                <div class="tch-team">
+                  
+                  <%= image_tag staff.cover_photo, width: 253 ,style: '' %>
+                  <div class="tch-team-details">
+                    <h5><%= staff.role %></h5>
+                    <h3><%= staff.name %></h3>
+                    
+                    
+                  </div>
+                  
+                </div><!--tch-team end-->
+              </div>
+            <% end %>
+          <% end %>
+          
         </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Nicole Leclair</h3>
-            <%= image_tag 'staff-photo.png', width: 250, style: '' %>
-            <span>Founder</span>
-          </div><!--tch-team end-->
-        </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Laura Baker</h3>
-            <%= image_tag 'staff-photo-10.png', width: 250, style: '' %>
-            
-            <span>Director ● The Center</span> 
-          </div><!--tch-team end-->
-        </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Ashley Doucette</h3>
-            <%= image_tag 'staff-photo-7.png', width: 250, style: '' %>
-            <span>Director ● The Pond</span>
-          </div><!--tch-team end-->
-        </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Jackie Mears</h3>
-            <%= image_tag 'staff-photo-9.png', width: 250, style: '' %>
-            <span>Level 3 Early Childhood</span>
-            <span>Toddler Educator</span>
-          </div><!--tch-team end-->
-        </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Jenny McCarron</h3>
-            
-            <%= image_tag 'staff-photo-4.png', width: 250, style: '' %>
-            <span>Level 3 Early Childhood</span>
-            <span>Toddler Educator</span>
-          </div><!--tch-team end-->
-        </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Justine Chandler</h3>
-            <%= image_tag 'staff-photo-9.png', width: 250, style: '' %>
-            <span>Level 1 Early Childhood</span>
-            <span>Pre Kindergarten Educator</span>
-            
-          </div><!--tch-team end-->
-        </div>
-        <div class="col-lg-3">
-          <div class="tch-team">
-            <h3>Jinzi Maio</h3>
-            <%= image_tag 'staff-photo-8.png', width: 250, style: '' %>
-            <span>Level 1 Early Childhood</span>
-            <span>Pre Kindergarten Educator</span>
-            
-          </div><!--tch-team end-->
-        </div>
-      </div>
-    </div><!--teachers-sec end-->
+      </div><!--teachers-sec end-->
+    <% end %>
+    
   </div>
 </section>
 <section class="block2">

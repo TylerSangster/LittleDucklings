@@ -9,14 +9,18 @@ class PageController < ApplicationController
 
   def home
     @notices = Notice.published
+
+    @staff_pages = StaffPage.where(location: "The Little Ducklings")
   end
 
   def lake
     @notices = Notice.published
+    @staff_pages = StaffPage.where(location: "The Little Ducklings Lake")
   end
 
   def pond
     @notices = Notice.published
+    @staff_pages = StaffPage.where(location: "The Little Ducklings Pond")
   end
 
   def locations
