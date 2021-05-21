@@ -95,6 +95,7 @@ ActiveAdmin.register StaffPage do
         f.input :body, as: :froala_editor, input_html: { data: { options: {fontFamily: {
           "'Artifakt Element',Tahoma,Arial,sans-serif": 'Artifakt Element',
           "'Artifakt Legend',Verdana,Helvetica,sans-serif": 'Artifakt Legend',
+          "'Amatic SC', 'cursive' ": 'Amatic',
         },
         toolbarButtons: [
           'fullscreen', 'bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', '|',
