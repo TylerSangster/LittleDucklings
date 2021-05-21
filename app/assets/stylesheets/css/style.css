@@ -1438,7 +1438,10 @@ header.hp2 .cart-opt a {
 .slick-slide {
 	outline: none;
 }
-
+svg.svg-inline--fa.fa-star.fa-w-18 {
+    color: #ddc81f;
+    font-size: 20px;
+}
 
 /* ============== cls-text =============== */
 
