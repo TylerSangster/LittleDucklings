@@ -53,7 +53,7 @@ ActiveAdmin.register BlogPost do
               collection: ['draft', 'published']
 
       f.input :published_at, as: :date_time_picker, hint: "In #{ Time.current.zone } time zone."
-      f.input :body, 
+      f.input :body
     end
     f.actions
   end
