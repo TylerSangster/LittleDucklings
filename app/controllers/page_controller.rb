@@ -10,7 +10,7 @@ class PageController < ApplicationController
   def home
     @notices = Notice.published
     @reviews = Review.published
-    @staff_pages = StaffPage.where(location: "The Little Ducklings", state: "Published")
+    @staff_pages = StaffPage.where(location: "The Little Ducklings", state: "published")
   end
 
   def lake
