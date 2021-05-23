@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_18_235737) do
+ActiveRecord::Schema.define(version: 2021_05_23_203644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,6 +105,18 @@ ActiveRecord::Schema.define(version: 2021_05_18_235737) do
     t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "title"
+    t.string "slug"
+    t.string "location"
+    t.string "state", default: "draft", null: false
+    t.datetime "published_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["published_at"], name: "images_published_at_idx"
+    t.index ["state"], name: "images_state_idx"
   end
 
   create_table "items", force: :cascade do |t|

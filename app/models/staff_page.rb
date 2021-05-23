@@ -14,7 +14,7 @@ class StaffPage < ApplicationRecord
   validates :published_at, presence: true, if: :published?
   
 
-  paginates_per 8
+  scope :published, -> { where(state: "published").where('published_until > ?', DateTime.now)}
 
   def published?
     state == 'published'
