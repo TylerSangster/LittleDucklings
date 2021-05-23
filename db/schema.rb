@@ -97,6 +97,16 @@ ActiveRecord::Schema.define(version: 2021_05_18_235737) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "contact_submissions", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "subject"
+    t.string "location"
+    t.text "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.integer "item_type"

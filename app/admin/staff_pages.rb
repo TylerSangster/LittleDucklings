@@ -106,6 +106,7 @@ ActiveAdmin.register StaffPage do
         key: "<%= ENV['FROALA_EDITOR_ACTIVATION_KEY'] %>",
         heightMin: 300,
         heightMax: 800,
+        attribution: false,
         htmlRemoveTags: ['base'],
         htmlAllowedAttrs: ['.*']} } }
         # f.input :body 
