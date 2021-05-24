@@ -16,13 +16,13 @@ class PageController < ApplicationController
   def lake
     @notices = Notice.published
     @reviews = Review.published
-    @staff_pages = StaffPage.where(location: "The Little Ducklings", state: "published")
+    @staff_pages = StaffPage.where(location: "The Little Ducklings Lake", state: "published")
   end
 
   def pond
     @notices = Notice.published
     @reviews = Review.published
-    @staff_pages = StaffPage.where(location: "The Little Ducklings", state: "published")
+    @staff_pages = StaffPage.where(location: "The Little Ducklings Pond", state: "published")
   end
 
   def locations
