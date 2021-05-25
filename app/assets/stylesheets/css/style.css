@@ -1578,7 +1578,7 @@ svg.svg-inline--fa.fa-star.fa-w-18 {
 .feat-links {
 	float: left;
 	width: 100%;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 .feat-links ul {
 	float: left;
@@ -1591,6 +1591,25 @@ svg.svg-inline--fa.fa-star.fa-w-18 {
 	display: table;
 }
 .feat-links ul li i {
+	float: left;
+	color: #ffffff;
+	font-size: 15px;
+	width: 27px;
+	height: 24px;
+	background-color: #dc5f9a;
+	border: 2px solid #ba2b6f;
+	text-align: center;
+	line-height: 22px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	background-image: image-url('bg-vector-lg.png');
+	background-size: cover;
+	display: table-cell;
+}
+svg.svg-inline--fa.fa-check.fa-w-16 {
 	float: left;
 	color: #ffffff;
 	font-size: 15px;
@@ -2694,7 +2713,7 @@ caption {
 .room-info {
 	float: left;
 	width: 100%;
-	padding: 70px 30px 70px 60px;
+	padding: 20px 10px 20px 10px;
 }
 .room-info .title-hd {
 	font-size: 53px;
@@ -2706,7 +2725,7 @@ caption {
 	color: #f1c00a;
 	font-size: 18px;
 	font-weight: 700;
-	float: left;
+	/*float: left;*/
 	margin-bottom: 10px;
 	width: 100%;
 }

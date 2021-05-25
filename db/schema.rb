@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_23_203644) do
+ActiveRecord::Schema.define(version: 2021_05_25_160310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,26 @@ ActiveRecord::Schema.define(version: 2021_05_23_203644) do
     t.index ["slug"], name: "index_blog_posts_on_slug", unique: true
     t.index ["state"], name: "blog_posts_state_idx"
     t.index ["title"], name: "blog_posts_title_idx"
+  end
+
+  create_table "centres", force: :cascade do |t|
+    t.string "name"
+    t.string "welcome_header"
+    t.text "welcome_body"
+    t.text "openning_time"
+    t.text "payments"
+    t.string "email"
+    t.string "phone"
+    t.string "program_name"
+    t.string "program_price"
+    t.string "program_2_name"
+    t.string "program_2_price"
+    t.string "program_3_name"
+    t.string "program_3_price"
+    t.string "program_4_name"
+    t.string "program_4_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "children", force: :cascade do |t|
@@ -161,6 +181,18 @@ ActiveRecord::Schema.define(version: 2021_05_23_203644) do
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string "title"
+    t.string "ages"
+    t.string "class_size"
+    t.string "header"
+    t.text "body"
+    t.bigint "centre_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["centre_id"], name: "index_programs_on_centre_id"
   end
 
   create_table "reviews", force: :cascade do |t|

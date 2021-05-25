@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  welcome_header: MyString
+  welcome_body: MyText
+  openning_time: MyText
+  payments: MyText
+  email: MyString
+  phone: MyString
+  program_name: MyString
+  program_price: MyString
+  program_2_name: MyString
+  program_2_price: MyString
+  program_3_name: MyString
+  program_3_price: MyString
+  program_4_name: MyString
+  program_4_price: MyString
+  program: one
+
+two:
+  name: MyString
+  welcome_header: MyString
+  welcome_body: MyText
+  openning_time: MyText
+  payments: MyText
+  email: MyString
+  phone: MyString
+  program_name: MyString
+  program_price: MyString
+  program_2_name: MyString
+  program_2_price: MyString
+  program_3_name: MyString
+  program_3_price: MyString
+  program_4_name: MyString
+  program_4_price: MyString
+  program: two

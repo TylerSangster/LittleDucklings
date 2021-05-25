@@ -6,8 +6,9 @@ require("channels")
 var $ = require('jquery');
 window.jQuery = $;
 window.$ = $;
-require("bootstrap");
+
 require('@fortawesome/fontawesome-free');
+require("bootstrap");
 require("slick-carousel");
 require("packs/init_slick");
 
