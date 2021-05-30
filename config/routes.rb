@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get 'programs/toddler' => 'page#toddler'
   resources :staff_pages, only: :show
 
+  resources :blog_posts, only: :show
 end

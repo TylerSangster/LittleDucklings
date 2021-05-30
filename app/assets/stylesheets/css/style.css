@@ -918,6 +918,19 @@ header.hp2 .cart-opt a {
 .cms-about-us {
 	float: left;
 	width: 100%;
+	.title-hd {
+		float: left;
+		width: 100%;
+		color: #575656;
+		font-size: 48px;
+		font-weight: 700;
+		font-family: 'Amatic SC', cursive;
+		text-transform: uppercase;
+		position: relative;
+		padding-bottom: 33px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
 }
 .cms-about-text {
 	float: left;
@@ -987,7 +1000,10 @@ header.hp2 .cart-opt a {
 }
 .cms-abt-img img {
 }
-
+.cms-welcome-img img {
+	float: right;
+  padding-left: 30px;
+}
 
 /* =============== heading ================= */
 

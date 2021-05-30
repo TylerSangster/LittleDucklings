@@ -5,7 +5,7 @@ ActiveAdmin.register BlogPost do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :title, :subtitle, :state, :body, :publisher, :published_at,  images: []
+  permit_params :cover_photo, :title, :subtitle, :state, :body, :publisher, :published_at,  images: []
   # find record with slug(friendly_id)
   controller do
     def find_resource
@@ -31,6 +31,13 @@ ActiveAdmin.register BlogPost do
 
   show do
     attributes_table do
+      row :cover_photo do
+        if resource.cover_photo.present?
+          link_to image_tag(resource.cover_photo, width: 300), resource.cover_photo, target: '_blank'
+        else
+          status_tag 'None'
+        end
+      end
       row :title
       row :subtitle
       row :state
@@ -44,6 +51,16 @@ ActiveAdmin.register BlogPost do
 
   form do |f|
     f.inputs 'BlogPost Details' do
+      cover_photo = ['cover_photo image size should be 250:297 for best results.']
+      cover_photo += if object.cover_photo.blank?
+                          [br, content_tag(:span, 'No cover_photo Image Uploaded', class: 'status_tag no_image')]
+                        else
+                          [br, link_to(image_tag(object.cover_photo, width: 300), object.cover_photo, title: 'Click to see original', target: '_blank')]
+                        end
+      cover_photo = safe_join cover_photo
+      
+
+      f.input :cover_photo, as: :file, hint: cover_photo
       f.input :title
       f.input :subtitle
       f.input :publisher

@@ -10,87 +10,102 @@
     <div class="container">
       <div class="pricing-tables">
         <div class="row">
-          <div class="col-lg-3 col-md-4">
-            <div class="price-table">
-              <div class="ico">
-                <!-- <%= image_tag('ico1.png') %> -->
-              </div>
-              <h3>Pre-Kindergarten</h3>
-              <div class="pricing-content">
-                <ul>
-                  <li>
-                    <span>Per Week</span>
-                    <span><strong>$80</strong></span>
-                    
-                  </li>
+          <%- if @centre.program_name.present?  %>
+            <div class="col-lg-3 col-md-4">
+              <div class="price-table clr_3">
+                <div class="ico">
+                  <!-- <%= image_tag('ico1.png') %> -->
+                </div>
+                <h3><%= @centre.program_name %></h3>
+                <div class="pricing-content">
+                  <ul>
+                    <li>
+                      <span>Per Week</span>
+                      <span><strong>$<%= @centre.program_price %></strong></span>
+                      
+                    </li>
 
-                </ul>
-              </div><!--pricing-content end-->
+                  </ul>
+                </div><!--pricing-content end-->
 
-            </div><!--price-table end-->
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="price-table clr_2">
-              <div class="ico">
-                <!-- <%= image_tag('ico2.png') %> -->
-              </div>
-              <h3>Before & Afterschool</h3>
-              <div class="pricing-content">
-                <ul>
-                  <li>
-                    <span>Per Week</span>
-                    <span><strong>$90</strong></span>
-                    
-                  </li>
-                </ul>
-              </div><!--pricing-content end-->
+              </div><!--price-table end-->
+            </div>
+          <%- end %>
+          <%- if @centre.program_2_name.present? and @centre.program_2_price.present? %>
+            <div class="col-lg-3 col-md-4">
+              <div class="price-table clr_1">
+                <div class="ico">
+                  <!-- <%= image_tag('ico2.png') %> -->
+                </div>
+                <h3><%= @centre.program_2_name %></h3>
+                <div class="pricing-content ">
+                  <ul>
+                    <li>
+                      <span>Per Week</span>
+                      <span><strong>$<%= @centre.program_2_price %></strong></span>
+                      
+                    </li>
 
-            </div><!--price-table end-->
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="price-table clr_3">
-              <div class="ico">
-                <!-- <%= image_tag('ico3.png') %> -->
-              </div>
-              <h3>Afterschool Only</h3>
-              <div class="pricing-content">
-                <ul>
-                  <li>
-                    <span>Per Week</span>
-                    <span><strong>$80</strong></span>
-                    
-                  </li>
-                </ul>
-              </div><!--pricing-content end-->
+                  </ul>
+                </div><!--pricing-content end-->
 
-            </div><!--price-table end-->
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="price-table clr_3">
-              <div class="ico">
-                <!-- <%= image_tag('ico1.png') %> -->
-              </div>
-              <h3>Full Day</h3>
-              <div class="pricing-content">
-                <ul>
-                  <li>
-                    <span>Per Week</span>
-                    <span><strong>$150</strong></span>
-                    
-                  </li>
-                </ul>
-              </div><!--pricing-content end-->
+              </div><!--price-table end-->
+            </div>
 
-            </div><!--price-table end-->
-          </div>
+          <%- end %>
+          <%- if @centre.program_3_name.present? and @centre.program_3_price.present? %>
+            <div class="col-lg-3 col-md-4">
+              <div class="price-table clr_2">
+                <div class="ico">
+                  <!-- <%= image_tag('ico3.png') %> -->
+                </div>
+                <h3><%= @centre.program_3_name %></h3>
+                <div class="pricing-content ">
+                  <ul>
+                    <li>
+                      <span>Per Week</span>
+                      <span><strong>$<%= @centre.program_3_price %></strong></span>
+                      
+                    </li>
+
+                  </ul>
+                </div><!--pricing-content end-->
+
+              </div><!--price-table end-->
+            </div>
+
+          <%- end %>
+          <%- if @centre.program_4_name.present? and @centre.program_4_price.present? %>
+            <div class="col-lg-3 col-md-4">
+              <div class="price-table clr_3">
+                <div class="ico">
+                  <!-- <%= image_tag('ico1.png') %> -->
+                </div>
+                <h3><%= @centre.program_4_name %></h3>
+                <div class="pricing-content ">
+                  <ul>
+                    <li>
+                      <span>Per Week</span>
+                      <span><strong>$<%= @centre.program_4_price %></strong></span>
+                      
+                    </li>
+
+                  </ul>
+                </div><!--pricing-content end-->
+
+              </div><!--price-table end-->
+            </div>
+
+          <%- end %>
+          
         </div>
       </div><!--pricing-tables end-->
       
       <div class="other-info">
         <p>If you have any questions about our amazing kindergarten, please do not hesitate to contact us.</p>
         <div class="cont-info">
-          <h3><a href="mailto:kindergarten@kindergarten.com" title="">LittleDucklingsinc@gmail.com</a></h3>
-          <h3>+1 902 370 3925</h3>
+          <h3><a href=<%= @centre.email if @centre.email.present? %> title=""><%= @centre.email if @centre.email.present? %></a></h3>
+          <h3><%= @centre.phone if @centre.phone.present? %></h3>
         </div><!--cont-info end -->
       </div><!--other-info end-->
     </div>
@@ -103,15 +118,13 @@
         <div class="col-lg-6">
           <div class="cms-opn-info pd-left">
             <h3 class="title-hd">Opening Times</h3>
-            <p>Little Ducklings Lake Childcare Centre will open at 6:30 a.m. and close at 6:30 sharp.</p> 
-            <p>  If early care is required by your family please let a staff member know one day in advance. Children are to be in our care no longer than 10 hours per day.</p>
+            <p><%= @centre.openning_time %></p>
           </div><!--cms-opn-info end-->
         </div>
         <div class="col-lg-6">
           <div class="cms-opn-info pd-right">
             <h3 class="title-hd">Payments</h3>
-            <p>Fees are payable, in advance, on the 1st day of each calendar month.</p>
-            <p>Payments can be made with etransfers to LittleDucklingsinc@gmail.com please include details of the child.</p>
+            <p><%= @centre.payments %></p>
             
           </div><!--cms-opn-info end-->
         </div>

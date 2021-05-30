@@ -10,20 +10,25 @@ class PageController < ApplicationController
   def home
     @notices = Notice.published
     @reviews = Review.published
+    @centre = Centre.where(name: "Little Ducklings").first
     @staff_pages = StaffPage.where(location: "The Little Ducklings", state: "published")
+    # @blog_posts = BlogPost.published
   end
 
   def lake
     @notices = Notice.published
     @reviews = Review.published
+    @centre = Centre.where(name: "Little Ducklings").first
     @staff_pages = StaffPage.where(location: "The Little Ducklings Lake", state: "published")
-    
+    @blog_posts = BlogPost.published
   end
 
   def pond
     @notices = Notice.published
     @reviews = Review.published
     @staff_pages = StaffPage.where(location: "The Little Ducklings Pond", state: "published")
+    @centre = Centre.where(name: "Little Ducklings").first
+    @blog_posts = BlogPost.published
   end
 
   def locations
