@@ -15,12 +15,12 @@ document.addEventListener("turbolinks:load", function() {
   // // bootstrap 4 responsive multi column slick carousel
 $('#slick_edu').slick({
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 4000,
   draggable: true,
   pauseOnHover: false,
   infinite: true,
   dots: false,
-  arrows: false,
+  arrows: true,
   speed: 1000,
   
   mobileFirst: true,

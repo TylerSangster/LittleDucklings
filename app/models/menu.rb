@@ -1,3 +1,3 @@
 class Menu < ApplicationRecord
-  has_many :items
+  scope :published, -> { where(state: "published")}
 end

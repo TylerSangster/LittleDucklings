@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_25_160310) do
+ActiveRecord::Schema.define(version: 2021_05_31_210627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -152,10 +152,25 @@ ActiveRecord::Schema.define(version: 2021_05_25_160310) do
 
   create_table "menus", force: :cascade do |t|
     t.string "title"
-    t.string "description"
-    t.datetime "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "monday_morning_snack"
+    t.string "monday_lunch"
+    t.string "monday_afternoon_snank"
+    t.string "tuesday_morning_snack"
+    t.string "tuesday_lunch"
+    t.string "tuesday_afternoon_snank"
+    t.string "wednesday_morning_snack"
+    t.string "wednesday_lunch"
+    t.string "wednesday_afternoon_snank"
+    t.string "thursday_morning_snack"
+    t.string "thursday_lunch"
+    t.string "thursday_afternoon_snank"
+    t.string "friday_morning_snack"
+    t.string "friday_lunch"
+    t.string "friday_afternoon_snank"
+    t.datetime "published_at"
+    t.string "state", default: "draft"
   end
 
   create_table "notices", force: :cascade do |t|

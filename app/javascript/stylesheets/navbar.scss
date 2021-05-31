@@ -1,13 +1,15 @@
 .navbar-light .navbar-brand {
-  h3 {
-    font-size: 34px;
-    font-weight: 700;
-    font-family: 'Amatic SC', cursive;
-  }
+
   color: #fff;
   
   padding: 0;
 }
+a.navbar-brand {
+    font-size: 34px;
+    font-weight: 700;
+    font-family: 'Amatic SC', cursive;
+}
+
 #littleducklings-nav {
   background-color: #6b448e !important;
   // background-color: #D0322E !important;

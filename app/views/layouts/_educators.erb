@@ -12,9 +12,9 @@
         <div id='slick_edu' class="row staff-carousel">
           <% @staff_pages.each do |staff| %>
             <%= link_to staff_page_path(staff) do %>
-              <div class="col-lg-3  slide">
+              <div class="col-lg-3 slide">
                 <div class="tch-team">
-                  <%= image_tag staff.cover_photo, width: 245 ,style: '' %>
+                  <%= image_tag staff.cover_photo, width: 245 , style: '' %>
                   <div class="tch-team-details">
                     <h5><%= staff.role %></h5>
                     <h3><%= staff.name %></h3>
