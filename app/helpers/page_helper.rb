@@ -9,13 +9,13 @@ module PageHelper
     end
   end
 
-  def homepage_url
+  def homepage_url(anchor = nil)
     if params[:action] == "lake"
-      lake_path
+      lake_path(anchor: anchor)
     elsif params[:action] == "pond"
-      pond_path
+      pond_path(anchor: anchor)
     else
-      home_path
+      home_path(anchor: anchor)
     end
   end
 

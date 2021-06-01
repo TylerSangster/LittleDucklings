@@ -45,47 +45,23 @@
           </div>
           <div class="col-lg-3">
             <div class="right-sidebar">
-              <div class="widget widget-posts">
-                  <h3 class="widget-title">Recent Posts</h3>
-                  <div class="blg-posts">
-                    <div class="blg-post">
-                      <img src="http://via.placeholder.com/50x50" alt="">
-                      <div class="blg-info">
-                        <h3>Story Time</h3>
-                        <span>May 13 2016 | by <a href="#" title="">admin</a></span>
-                        <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas...</p>
-                      </div>
-                    </div><!--blg-post end-->
-                    <div class="blg-post">
-                      <img src="http://via.placeholder.com/50x50" alt="">
-                      <div class="blg-info">
-                        <h3>Reading Lessons</h3>
-                        <span>May 13 2016 | by <a href="#" title="">admin</a></span>
-                        <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas...</p>
-                      </div>
-                    </div><!--blg-post end-->
-                    <div class="blg-post">
-                      <img src="http://via.placeholder.com/50x50" alt="">
-                      <div class="blg-info">
-                        <h3>Education Through Play</h3>
-                        <span>May 13 2016 | by <a href="#" title="">admin</a></span>
-                        <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas...</p>
-                      </div>
-                    </div><!--blg-post end-->
-                  </div><!--blg-posts end-->
-                </div><!--widget-posts end-->
+
               <div class="widget widget-categories">
                 <h3 class="widget-title">Pages</h3>
                 <ul>
-                  <li><a href="#" title="">Dance</a></li>
-                  <li><a href="#" title="">Education</a></li>
-                  <li><a href="#" title="">Events</a></li>
-                  <li><a href="#" title="">Fun</a></li>
-                  <li><a href="#" title="">General</a></li>
-                  <li><a href="#" title="">Games</a></li>
+
+                  <li><%= link_to "Home", homepage_url("welcome") %></li>
+                  
+                  <li><%= link_to "Educators", homepage_url("educators")%></li>
+                  <li><%= link_to "Testimonials", homepage_url("testimonials") %></li>
+                  <li><%= link_to "Programs", homepage_url("programs")%></li>
+                  <li><%= link_to "Prices", homepage_url("prices")%></li>
+                  <li><%= link_to "Contact", homepage_url("contact")%></li>
+                  <li><%= link_to "Gallery", homepage_url("gallery")%></li>
+
                 </ul>
               </div><!--widget-categories end-->
-              <div class="widget widget-text">
+              <!-- <div class="widget widget-text">
                 <h3 class="widget-title">Text Widget</h3>
                 <p>Elipsis magna a terminal nulla elementum morbi elite forte maecenas est magna vehicula est node maecenas.</p>
                 <p> Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat elit maecenas. </p>
@@ -94,7 +70,7 @@
 
               
               
-            </div><!--right-sidebar end-->
+            </div><!--right-sidebar end--> 
           </div>
         </div>
       </div><!--blog_post end-->

@@ -8,6 +8,7 @@ class StaffPagesController < ApplicationController
 
   # GET /staff_pages/1 or /staff_pages/1.json
   def show
+    @menu = Menu.first
   end
 
   # # GET /staff_pages/new
