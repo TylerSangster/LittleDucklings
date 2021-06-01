@@ -16,6 +16,7 @@ ActiveAdmin.register StaffPage do
     id_column
     column :name
     column :slug
+    column :location
     column :state
     column :published_at
     column :created_at
@@ -34,6 +35,7 @@ ActiveAdmin.register StaffPage do
       end
       row :name
       row :slug
+      row :location
       row :state
       row :role
       row :body do |page|
