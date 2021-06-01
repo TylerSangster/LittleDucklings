@@ -58,12 +58,13 @@
 
       <div class="col-lg-3 col-md-6 col-sm-6 col-6">
         <div class="room-img">
-          <%= image_tag 'boy-340x719.jpeg', width: '340' %>
+
+          <%= image_tag @prek_program.cover_photo, width: '340' if  @prek_program.cover_photo.present? %>
         </div><!--room-img end-->
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-6">
         <div class="room-img">
-          <%= image_tag 'pre-k-340x719.jpeg', width: '340' %>
+          <%= image_tag @prek_program.cover_photo_2, width: '340' if @prek_program.cover_photo2.present? %>
           
         </div><!--room-img end-->
       </div>
@@ -90,19 +91,20 @@
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6 col-6">
         <div class="room-img">
-          <%= image_tag 'pre-school-room.jpeg', width: '340' %>
+          <%= image_tag @school_program.cover_photo, width: '340' if  @school_program.cover_photo.present? %>
+
         </div><!--room-img end-->
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-6">
         <div class="room-img">
-          <%= image_tag 'pre-k-painting.jpeg', width: '340' %>
+          <%= image_tag @school_program.cover_photo2, width: '340' if  @school_program.cover_photo2.present? %>
         </div><!--room-img end-->
       </div>
       <div class="col-lg-6">
         <div class="room-info ">
           <h3 class="title-hd">School Aged program </h3>
           <div class="badge badge-info">Ages: <%= @school_program.ages if @school_program and @school_program.ages %></div>
-          <div class="badge badge-warning">Class Size: <%= @school_program.class_size if @school_program and @school_program.size%></div>
+          <div class="badge badge-warning">Class Size: <%= @school_program.class_size if @school_program and @school_program.class_size%></div>
           <div class="feat-links">
             <ul>
               <li><i class="fa fa-check"></i> <span>Build positive peer relationships.</span></li>

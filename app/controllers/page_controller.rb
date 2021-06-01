@@ -27,7 +27,7 @@ class PageController < ApplicationController
     @staff_pages = StaffPage.where(location: ["Little Ducklings Lake", "All"], state: "published")
     @blog_posts = BlogPost.published
     @menu = Menu.first
-    @school_program = @centre.programs.where(title: "SCHOOL AGE PROGRAM").first if @centre.present?
+    @school_program = @centre.programs.where(title: "SCHOOL AGED PROGRAM").first if @centre.present?
     @prek_program = @centre.programs.where(title: "PRE-KINDERGARTEN PROGRAM").first if @centre.present?
   end
 
