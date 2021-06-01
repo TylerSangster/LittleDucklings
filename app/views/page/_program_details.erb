@@ -17,8 +17,8 @@
       <div class="col-lg-6">
         <div class="room-info">
           <h3 class="title-hd">Infant Program</h3>
-          <div class="badge badge-info">AGES: 8-22 Months</div>
-          <div class="badge badge-warning">Class Size: 6</div>
+          <div class="badge badge-info">AGES: <%= @infant_program.ages if @infant_program %></div>
+          <div class="badge badge-warning">Class Size: <%= @infant_program.class_size if @infant_program %></div>
             
 
           <div class="feat-links">

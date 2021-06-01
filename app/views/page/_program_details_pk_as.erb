@@ -25,8 +25,8 @@
       <div class="col-lg-6">
         <div class="room-info ">
           <h3 class="title-hd">Pre-Kindergarten Program</h3>
-          <div class="badge badge-info">Ages: 4 - 5 Years</div>
-          <div class="badge badge-warning">Class Size: 25</div>
+          <div class="badge badge-info">Ages: <%= @prek_program.ages if @prek_program %></div>
+          <div class="badge badge-warning">Class Size: <%= @prek_program.size if @prek_program %></div>
 
           <div class="feat-links">
             <ul>
@@ -101,9 +101,8 @@
       <div class="col-lg-6">
         <div class="room-info ">
           <h3 class="title-hd">School Aged program </h3>
-          <div class="badge badge-info">Ages: 6+ Years</div>
-          <div class="badge badge-warning">Class Size: 18</div>
-
+          <div class="badge badge-info">Ages: <%= @school_program.ages if @school_program and @school_program.ages %></div>
+          <div class="badge badge-warning">Class Size: <%= @school_program.size if @school_program and @school_program.size%></div>
           <div class="feat-links">
             <ul>
               <li><i class="fa fa-check"></i> <span>Build positive peer relationships.</span></li>

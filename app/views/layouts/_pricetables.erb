@@ -10,7 +10,7 @@
     <div class="container">
       <div class="pricing-tables">
         <div class="row">
-          <%- if @centre.program_name.present?  %>
+          <%- if @centre and @centre.program_name.present? and @centre.program_price.present? %>
             <div class="col-lg-3 col-md-4">
               <div class="price-table clr_1">
                 <div class="ico sbg1">
@@ -31,7 +31,7 @@
               </div><!--price-table end-->
             </div>
           <%- end %>
-          <%- if @centre.program_2_name.present? and @centre.program_2_price.present? %>
+          <%- if @centre and @centre.program_2_name.present? and @centre.program_2_price.present? %>
             <div class="col-lg-3 col-md-4">
               <div class="price-table clr_2">
                 <div class="ico ">
@@ -53,7 +53,7 @@
             </div>
 
           <%- end %>
-          <%- if @centre.program_3_name.present? and @centre.program_3_price.present? %>
+          <%- if @centre and @centre.program_3_name.present? and @centre.program_3_price.present? %>
             <div class="col-lg-3 col-md-4">
               <div class="price-table clr_1">
                 <div class="ico sbg1">
@@ -75,7 +75,7 @@
             </div>
 
           <%- end %>
-          <%- if @centre.program_4_name.present? and @centre.program_4_price.present? %>
+          <%- if @centre and @centre.program_4_name.present? and @centre.program_4_price.present? %>
             <div class="col-lg-3 col-md-4">
               <div class="price-table clr_2">
                 <div class="ico ">
@@ -104,8 +104,10 @@
       <div class="other-info">
         <p>Part-time must be at least two days per week and they need to be the same days each week. If you have any questions, please do not hesitate to contact us.</p>
         <div class="cont-info">
-          <h3><a href=<%= @centre.email if @centre.email.present? %> title=""><%= @centre.email if @centre.email.present? %></a></h3>
-          <h3><%= @centre.phone if @centre.phone.present? %></h3>
+          <%- if @centre and @centre.email.present? and @centre.phone.present? %>
+            <h3><a href=<%= @centre.email %> title=""><%= @centre.email %></a></h3>
+            <h3><%= @centre.phone %></h3>
+          <% end %>
         </div><!--cont-info end -->
       </div><!--other-info end-->
     </div>
@@ -118,13 +120,13 @@
         <div class="col-lg-6">
           <div class="cms-opn-info pd-left">
             <h3 class="title-hd">Opening Times</h3>
-            <p><%= @centre.openning_time %></p>
+            <p><%= @centre.openning_time if @centre and @centre.openning_time.present? %></p>
           </div><!--cms-opn-info end-->
         </div>
         <div class="col-lg-6">
           <div class="cms-opn-info pd-right">
             <h3 class="title-hd">Payments</h3>
-            <p><%= @centre.payments %></p>
+            <p><%= @centre.payments if @centre and @centre.payments.present? %></p>
             
           </div><!--cms-opn-info end-->
         </div>
