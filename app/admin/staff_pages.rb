@@ -15,7 +15,6 @@ ActiveAdmin.register StaffPage do
   index do
     id_column
     column :name
-    column :slug
     column :location
     column :state
     column :published_at

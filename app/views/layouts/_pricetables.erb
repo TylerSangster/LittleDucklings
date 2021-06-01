@@ -120,13 +120,13 @@
         <div class="col-lg-6">
           <div class="cms-opn-info pd-left">
             <h3 class="title-hd">Opening Times</h3>
-            <p><%= @centre.openning_time if @centre and @centre.openning_time.present? %></p>
+            <p><%= @centre.openning_time.html_safe if @centre and @centre.openning_time.present? %></p>
           </div><!--cms-opn-info end-->
         </div>
         <div class="col-lg-6">
           <div class="cms-opn-info pd-right">
             <h3 class="title-hd">Payments</h3>
-            <p><%= @centre.payments if @centre and @centre.payments.present? %></p>
+            <p><%= @centre.payments.html_safe if @centre and @centre.payments.present? %></p>
             
           </div><!--cms-opn-info end-->
         </div>
