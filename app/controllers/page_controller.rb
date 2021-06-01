@@ -11,7 +11,7 @@ class PageController < ApplicationController
     @notices = Notice.published
     @reviews = Review.published
     @centre = Centre.where(name: "Little Ducklings").first
-    @staff_pages = StaffPage.where(location: "The Little Ducklings", state: "published")
+    @staff_pages = StaffPage.where(location: ["Little Ducklings", "All"], state: "published")
     @menu = Menu.published.first
     # @blog_posts = BlogPost.published
   end
@@ -20,7 +20,7 @@ class PageController < ApplicationController
     @notices = Notice.published
     @reviews = Review.published
     @centre = Centre.where(name: "Little Ducklings").first
-    @staff_pages = StaffPage.where(location: "The Little Ducklings Lake", state: "published")
+    @staff_pages = StaffPage.where(location: ["Little Ducklings Lake", "All"], state: "published")
     @blog_posts = BlogPost.published
     @menu = Menu.first
   end
@@ -28,7 +28,7 @@ class PageController < ApplicationController
   def pond
     @notices = Notice.published
     @reviews = Review.published
-    @staff_pages = StaffPage.where(location: "The Little Ducklings Pond", state: "published")
+    @staff_pages = StaffPage.where(location: ["Little Ducklings Pond", "All"], state: "published")
     @centre = Centre.where(name: "Little Ducklings").first
     @blog_posts = BlogPost.published
     @menu = Menu.first

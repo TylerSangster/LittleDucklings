@@ -7,12 +7,13 @@ var $ = require('jquery');
 window.jQuery = $;
 window.$ = $;
 
-require('@fortawesome/fontawesome-free');
+require('@fortawesome/fontawesome-pro');
+
 require("bootstrap");
 require("slick-carousel");
 require("packs/init_slick");
 
-import "@fortawesome/fontawesome-free/js/all";
+import "@fortawesome/fontawesome-pro/js/all";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 import "../stylesheets/application";

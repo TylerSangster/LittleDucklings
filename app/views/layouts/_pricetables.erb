@@ -12,9 +12,9 @@
         <div class="row">
           <%- if @centre.program_name.present?  %>
             <div class="col-lg-3 col-md-4">
-              <div class="price-table clr_3">
-                <div class="ico">
-                  <!-- <%= image_tag('ico1.png') %> -->
+              <div class="price-table clr_1">
+                <div class="ico sbg1">
+                  <i class="fad fa-duck"></i>
                 </div>
                 <h3><%= @centre.program_name %></h3>
                 <div class="pricing-content">
@@ -33,9 +33,9 @@
           <%- end %>
           <%- if @centre.program_2_name.present? and @centre.program_2_price.present? %>
             <div class="col-lg-3 col-md-4">
-              <div class="price-table clr_1">
-                <div class="ico">
-                  <!-- <%= image_tag('ico2.png') %> -->
+              <div class="price-table clr_2">
+                <div class="ico ">
+                  <i class="fad fa-duck"></i>
                 </div>
                 <h3><%= @centre.program_2_name %></h3>
                 <div class="pricing-content ">
@@ -55,9 +55,9 @@
           <%- end %>
           <%- if @centre.program_3_name.present? and @centre.program_3_price.present? %>
             <div class="col-lg-3 col-md-4">
-              <div class="price-table clr_2">
-                <div class="ico">
-                  <!-- <%= image_tag('ico3.png') %> -->
+              <div class="price-table clr_1">
+                <div class="ico sbg1">
+                  <i class="fad fa-duck"></i>
                 </div>
                 <h3><%= @centre.program_3_name %></h3>
                 <div class="pricing-content ">
@@ -77,9 +77,9 @@
           <%- end %>
           <%- if @centre.program_4_name.present? and @centre.program_4_price.present? %>
             <div class="col-lg-3 col-md-4">
-              <div class="price-table clr_3">
-                <div class="ico">
-                  <!-- <%= image_tag('ico1.png') %> -->
+              <div class="price-table clr_2">
+                <div class="ico ">
+                  <i class="fad fa-duck"></i>
                 </div>
                 <h3><%= @centre.program_4_name %></h3>
                 <div class="pricing-content ">
@@ -102,7 +102,7 @@
       </div><!--pricing-tables end-->
       
       <div class="other-info">
-        <p>If you have any questions about our amazing kindergarten, please do not hesitate to contact us.</p>
+        <p>Part-time must be at least two days per week and they need to be the same days each week. If you have any questions, please do not hesitate to contact us.</p>
         <div class="cont-info">
           <h3><a href=<%= @centre.email if @centre.email.present? %> title=""><%= @centre.email if @centre.email.present? %></a></h3>
           <h3><%= @centre.phone if @centre.phone.present? %></h3>

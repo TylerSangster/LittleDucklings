@@ -838,15 +838,25 @@ header.hp2 .cart-opt a {
 	background-repeat: no-repeat;
 	background-size: cover;
 	/*border: 2px solid #0f9fbc;*/
-	margin: 0 auto;
+	margin: 0 auto;	
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 50%;
+  box-sizing: border-box;
+	    
 }
-.service-icon i {
+.service-icon svg.svg-inline--fa.fa-duck.fa-w-16 {
 	color: #ffffff;
 	font-size: 63px;
 	text-align: center;
 	line-height: 120px;
 	float: left;
 	width: 100%;
+	vertical-align: middle;
+	    display: table-cell;
 }
 .sbg1 {
 	background-image: image-url('sbg1.png');
@@ -4395,7 +4405,7 @@ caption {
 	padding: 0 15px;
 }
 .ico {
-	width: 80px;
+/*	width: 80px;
 	height: 80px;
 	background-color: #fff;
 	text-align: center;
@@ -4404,8 +4414,24 @@ caption {
 	margin-top: -150px;
 	position: relative;
 	z-index: 999;
+	margin-bottom: 35px;*/
+	width: 100px;
+	height: 100px;
+	background-color: #6b448e;
+	text-align: center;
+	line-height: 120px;
+	margin: 0 auto;
+	margin-top: -150px;
+	position: relative;
+	z-index: 999;
 	margin-bottom: 35px;
+
+	svg.svg-inline--fa.fa-duck.fa-w-16 {
+	  font-size: 50px;
+	  color: #EAEAEA;
+	}
 }
+
 .ico img {
 	float: none;
 }

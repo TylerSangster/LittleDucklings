@@ -80,7 +80,7 @@ ActiveAdmin.register StaffPage do
         f.input :location,
                 as: :select,
                 value: f.object.location,
-                collection: ['The Little Ducklings', 'The Little Ducklings Pond', 'The Little Ducklings Lake' ]
+                collection: ['All','Little Ducklings', 'Little Ducklings Pond', 'Little Ducklings Lake' ]
         f.input :state,
                 as: :select,
                 value: f.object.state,

@@ -1,6 +1,6 @@
 ActiveAdmin.register Centre do
-  permit_params :name,  :welcome_header,  :welcome_body,  :openning_time,  :payments,  :email,  :phone,  :program_name,  :program_price,  :program_2_name,  :program_2_price,  :program_3_name,  :program_3_price,  :program_4_name,  :program_4_price, 
-  programs_attributes: [:id, :title, :ages, :class_size, :header, :body, :cover_photo, :cover_photo2, :cover_photo3, :_destroy]
+  permit_params :name,  :openning_time,  :payments,  :email,  :phone,  :program_name,  :program_price,  :program_2_name,  :program_2_price,  :program_3_name,  :program_3_price,  :program_4_name,  :program_4_price, 
+  programs_attributes: [:id, :title, :ages, :class_size, :cover_photo, :cover_photo2, :_destroy]
 
 
   index do
@@ -8,7 +8,7 @@ ActiveAdmin.register Centre do
     column :name
     column :email
     column :phone
-    column :welcome_header
+
 
 
 
@@ -28,8 +28,7 @@ ActiveAdmin.register Centre do
     attributes_table do
 
       row :name
-      row :welcome_header
-      row :welcome_body
+
       row :openning_time
       row :payments
       row :email
@@ -55,18 +54,15 @@ ActiveAdmin.register Centre do
         f.input :name
         f.input :email
         f.input :phone
-        f.input :welcome_header
-        f.input :welcome_body
+
 
         f.has_many :programs, allow_destroy: false do |program|
           program.input :title
           program.input :ages
           program.input :class_size
-          program.input :header
-          program.input :body
           program.input :cover_photo, as: :file
           program.input :cover_photo2, as: :file
-          program.input :cover_photo3, as: :file
+
         end
 
         f.input :program_name
