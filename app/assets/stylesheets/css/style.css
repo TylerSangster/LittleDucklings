@@ -818,7 +818,7 @@ header.hp2 .cart-opt a {
 .service-details {
 	float: left;
 	width: 100%;
-	margin-bottom: -2px;
+
 }
 .service-details:hover .service-icon  {
 	-webkit-transform: scale(1.1) translateX(10px);
@@ -2866,7 +2866,7 @@ caption {
 	color: #6f4792;
 }
 .staff-carousel {
-	margin-bottom: -2px;
+	margin-bottom: 0px;
 }
 .staff-carousel2 {
 	float: left;
