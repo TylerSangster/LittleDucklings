@@ -15,7 +15,7 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id=<%= nav_color %>>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " id=<%= nav_color %>>
       <div class="container">
         <%= link_to page_title, homepage_url, class: "navbar-brand" %>
 
@@ -27,40 +27,38 @@
 
             <li class="nav-item">
               <%= link_to "Home", homepage_url("welcome"), class: 'nav-link' %>
-              <!-- <a class="nav-link" href="#welcome">Home</a> -->
+
             </li>
             <li class="nav-item">
               <%= link_to "Educators", homepage_url("educators"), class: 'nav-link' %>
-              <!-- <a class="nav-link" href="#educators">Educators</a> -->
+
             </li>
             <li class="nav-item">
               <%= link_to "Testimonials", homepage_url("testimonials"), class: 'nav-link' %>
-              <!-- <a class="nav-link" href="#testimonials">Testimonials</a> -->
+
             </li>
             <li class="nav-item">
               <%= link_to "Programs", homepage_url("programs"), class: 'nav-link' %>
-              <!-- <a class="nav-link" href="#programs">Programs</a> -->
+
             </li>
             <li class="nav-item">
               <%= link_to "Prices", homepage_url("prices"), class: 'nav-link' %>
-              <!-- <a class="nav-link" href="#prices">Prices</a> -->
+    
             </li>
 
-            <li class="nav-item">
+   <!--          <li class="nav-item">
               <%= link_to "Contact", homepage_url("contact"), class: 'nav-link' %>
-              <!-- <a class="nav-link" href="#contact">Contact</a> -->
+   
             </li>
             <li class="nav-item">
               <%= link_to "Gallery", homepage_url("gallery"), class: 'nav-link' %>
-<!--               <a class="nav-link" href="#gallery">Gallery</a> -->
-            </li>
+
+            </li> -->
             
           </ul>
         </div>
       </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <% if @notices %>
       <% @notices.each do |notice|%>
         <div id="message">

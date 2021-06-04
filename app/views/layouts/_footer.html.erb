@@ -21,14 +21,14 @@
               <li><%= link_to "Testimonials", homepage_url("testimonials") %></li>
               <li><%= link_to "Programs", homepage_url("programs")%></li>
               <li><%= link_to "Prices", homepage_url("prices")%></li>
-              <li><%= link_to "Contact", homepage_url("contact")%></li>
-              <li><%= link_to "Gallery", homepage_url("gallery")%></li>
+              <!-- <li><%= link_to "Contact", homepage_url("contact")%></li> -->
+              <!-- <li><%= link_to "Gallery", homepage_url("gallery")%></li> -->
 
             </ul>
           </div><!--widget-links end-->
         </div>
         
-        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
            <div class="widget widget-menu">
             <h3 class="widget-title">On Menu This Week</h3>
             <div class="row">
@@ -37,33 +37,33 @@
                 <ul>
                   <li>Morning Snack: <%= @menu.monday_morning_snack if @menu.monday_morning_snack.present? %></li>
                   <li>Lunch: <%= @menu.monday_lunch if @menu.monday_lunch.present? %></li>
-                  <li><%= @menu.monday_afternoon_snank if @menu.monday_afternoon_snank.present? %></li>
+                  <li>Afternoon Snack: <%= @menu.monday_afternoon_snank if @menu.monday_afternoon_snank.present? %></li>
                 </ul>
                 <h4>Tuesday</h4>
                 <ul>
                   <li>Morning Snack: <%= @menu.tuesday_morning_snack %></li>
-                  <li><%= @menu.tuesday_lunch %></li>
-                  <li><%= @menu.tuesday_afternoon_snank %></li>
+                  <li>Lunch: <%= @menu.tuesday_lunch %></li>
+                  <li>Afternoon Snack: <%= @menu.tuesday_afternoon_snank %></li>
                 </ul>
                 <h4>Wednesday</h4>
                 <ul>
                   <li>Morning Snack: <%= @menu.wednesday_morning_snack %></li>
-                  <li><%= @menu.wednesday_lunch %></li>
-                  <li><%= @menu.wednesday_afternoon_snank %></li>
+                  <li>Lunch: <%= @menu.wednesday_lunch %></li>
+                  <li>Afternoon Snack: <%= @menu.wednesday_afternoon_snank %></li>
                 </ul>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                 <h4>Thursday</h4>
                 <ul>
                   <li>Morning Snack: <%= @menu.thursday_morning_snack %></li>
-                  <li><%= @menu.thursday_lunch %></li>
-                  <li><%= @menu.thursday_afternoon_snank %></li>
+                  <li>Lunch: <%= @menu.thursday_lunch %></li>
+                  <li>Afternoon Snack: <%= @menu.thursday_afternoon_snank %></li>
                 </ul>
                 <h4>Friday</h4>
                 <ul>
                   <li>Morning Snack: <%= @menu.friday_morning_snack %></li>
-                  <li><%= @menu.friday_lunch %></li>
-                  <li><%= @menu.friday_afternoon_snank %></li>
+                  <li>Lunch: <%= @menu.friday_lunch %></li>
+                  <li>Afternoon Snack: <%= @menu.friday_afternoon_snank %></li>
                 </ul>
               </div>
             </div class="row">

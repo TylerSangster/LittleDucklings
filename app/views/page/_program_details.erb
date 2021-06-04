@@ -200,12 +200,12 @@
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-6 col-6">
         <div class="room-img">
-          <%= image_tag @preschool_program.cover_photo, width: '340' if @preschool_program and @preschool_program.cover_photo.present? %>
+          <%= image_tag @preschool_program.cover_photo, class: "mx-auto img-fluid" if @preschool_program and @preschool_program.cover_photo.present? %>
         </div><!--room-img end-->
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-6">
         <div class="room-img">
-          <%= image_tag @preschool_program.cover_photo2, width: '340' if @preschool_program and @preschool_program.cover_photo2.present? %>
+          <%= image_tag @preschool_program.cover_photo2, class: "mx-auto img-fluid" if @preschool_program and @preschool_program.cover_photo2.present? %>
         </div><!--room-img end-->
       </div>
       <div class="col-lg-6">
