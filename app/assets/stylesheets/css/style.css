@@ -1397,7 +1397,7 @@ header.hp2 .cart-opt a {
 .testimonial-carousel {
 	float: left;
 	width: 100%;
-	padding: 0 170px;
+	padding: 0 0px;
 	position: relative;
 }
 .testi-comment {
@@ -1414,7 +1414,7 @@ header.hp2 .cart-opt a {
 .testimonial-carousel:after {
 	content: '';
 	position: absolute;
-	top: 0;
+	top: -56px;
 	width: 56px;
 	height: 49px;
 }
